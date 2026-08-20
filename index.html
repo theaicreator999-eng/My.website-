@@ -1,63 +1,623 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sachin Creator Hub — AI Content & Social Media</title>
-<meta name="description" content="Sachin Creator Hub — AI videos, memes, motivational content and social media resources.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sachin Panging | AI Creator & Digital Storyteller</title>
+
+<meta name="description" content="Sachin Panging — AI creator, digital storyteller and short-form content creator. Explore cinematic AI videos, social media content and brand collaborations.">
+
 <style>
-:root{--bg:#070812;--card:#111426;--text:#f5f7ff;--muted:#a9afc3;--accent:#8b5cf6;--accent2:#22d3ee;--line:#252a40}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,Arial;background:radial-gradient(circle at 80% 0%,#24134a 0,transparent 35%),var(--bg);color:var(--text);line-height:1.6}
-a{text-decoration:none;color:inherit}.wrap{max-width:1100px;margin:auto;padding:0 22px}
-nav{position:sticky;top:0;z-index:5;background:#070812d9;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;letter-spacing:.5px}.logo span{color:var(--accent2)}
-.links{display:flex;gap:22px;font-size:14px;color:var(--muted)}.links a:hover{color:white}
-.hero{padding:95px 0 70px;text-align:center}.badge{display:inline-block;padding:7px 13px;border:1px solid #3b3561;border-radius:999px;background:#17142a;color:#cfc8ff;font-size:13px}
-h1{font-size:clamp(42px,8vw,78px);line-height:1.02;margin:20px auto;max-width:850px;letter-spacing:-3px}
-.grad{background:linear-gradient(90deg,var(--accent2),#a78bfa,#f472b6);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{max-width:680px;margin:0 auto 28px;color:var(--muted);font-size:18px}
-.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn{padding:13px 20px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#6d5dfc);font-weight:800}.btn.alt{background:#15192b;border:1px solid var(--line)}
-section{padding:55px 0}.title{text-align:center;margin-bottom:30px}.title h2{font-size:34px;margin:0}.title p{color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,#121528,#0d1020);border:1px solid var(--line);border-radius:18px;padding:23px}.icon{font-size:28px}.card h3{margin:10px 0 6px}.card p{color:var(--muted);font-size:14px}
-.social{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.social a{padding:18px;border:1px solid var(--line);border-radius:15px;background:#101324;text-align:center;font-weight:800}.social small{display:block;color:var(--muted);font-weight:500;margin-top:4px}
-.cta{border:1px solid #39325d;border-radius:22px;padding:38px;text-align:center;background:linear-gradient(135deg,#171331,#0e1727)}
-footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px;text-align:center}
-@media(max-width:800px){.grid{grid-template-columns:1fr}.social{grid-template-columns:repeat(2,1fr)}.links{display:none}h1{letter-spacing:-2px}}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#080808;
+  color:#fff;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+}
+
+/* NAVIGATION */
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(8,8,8,.9);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #222;
+}
+
+.nav-inner{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.logo span{
+  color:#8b5cf6;
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+  font-size:14px;
+  color:#bbb;
+}
+
+.nav-links a:hover{
+  color:#fff;
+}
+
+/* HERO */
+.hero{
+  min-height:720px;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 20%,rgba(139,92,246,.25),transparent 35%),
+    #080808;
+}
+
+.hero-content{
+  max-width:850px;
+  margin:auto;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 14px;
+  border:1px solid #333;
+  border-radius:30px;
+  color:#bbb;
+  font-size:13px;
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font-size:clamp(45px,8vw,90px);
+  line-height:1;
+  letter-spacing:-3px;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  background:linear-gradient(90deg,#fff,#a78bfa);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  max-width:650px;
+  margin:auto;
+  color:#aaa;
+  font-size:18px;
+}
+
+.buttons{
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 22px;
+  border-radius:12px;
+  font-weight:700;
+  border:1px solid #333;
+  transition:.2s;
+}
+
+.btn-primary{
+  background:#fff;
+  color:#000;
+}
+
+.btn-secondary{
+  background:#151515;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+/* SECTIONS */
+section{
+  padding:90px 0;
+  border-top:1px solid #181818;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#888;
+}
+
+/* ABOUT */
+.about{
+  max-width:760px;
+  margin:auto;
+  text-align:center;
+  color:#aaa;
+  font-size:17px;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  background:#101010;
+  border:1px solid #242424;
+  border-radius:18px;
+  padding:25px;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#555;
+}
+
+.card-icon{
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#888;
+  font-size:14px;
+}
+
+/* WORK */
+.work-card{
+  min-height:190px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:linear-gradient(145deg,#171717,#0d0d0d);
+}
+
+.work-card span{
+  color:#9f8cff;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.stat{
+  text-align:center;
+  padding:25px 10px;
+  background:#101010;
+  border:1px solid #242424;
+  border-radius:16px;
+}
+
+.stat strong{
+  display:block;
+  font-size:30px;
+}
+
+.stat span{
+  color:#888;
+  font-size:13px;
+}
+
+/* BRAND */
+.brand-box{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+  padding:45px 25px;
+  border:1px solid #292929;
+  border-radius:24px;
+  background:
+    radial-gradient(circle at top,rgba(139,92,246,.15),transparent 50%),
+    #101010;
+}
+
+.brand-box h2{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.brand-box p{
+  color:#999;
+  max-width:650px;
+  margin:auto;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.contact-email{
+  display:inline-block;
+  margin-top:20px;
+  font-size:20px;
+  font-weight:bold;
+  color:#a78bfa;
+}
+
+/* FOOTER */
+footer{
+  padding:30px 0;
+  text-align:center;
+  color:#666;
+  font-size:13px;
+  border-top:1px solid #181818;
+}
+
+/* MOBILE */
+@media(max-width:750px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero{
+    min-height:650px;
+  }
+
+  .hero h1{
+    letter-spacing:-2px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  section{
+    padding:65px 0;
+  }
+
+}
 </style>
 </head>
+
 <body>
-<nav><div class="wrap nav"><a class="logo" href="#">SACHIN<span>CREATOR</span></a><div class="links"><a href="#content">Content</a><a href="#social">Social</a><a href="#blog">Blog</a><a href="#contact">Contact</a></div></div></nav>
 
-<header class="hero"><div class="wrap">
-<span class="badge">AI • CREATIVE • SOCIAL MEDIA</span>
-<h1>Turn ideas into <span class="grad">content people remember.</span></h1>
-<p>Welcome to my creator hub — a home for AI videos, memes, motivation, entertainment and practical social-media ideas.</p>
-<div class="btns"><a class="btn" href="#social">Follow Everywhere</a><a class="btn alt" href="#content">Explore Content</a></div>
-</div></header>
+<nav>
+  <div class="container nav-inner">
 
-<section id="content"><div class="wrap"><div class="title"><h2>What I Create</h2><p>Content designed for short-form audiences.</p></div>
-<div class="grid">
-<div class="card"><div class="icon">🎬</div><h3>AI Videos</h3><p>Cinematic AI concepts, short videos, characters and storytelling.</p></div>
-<div class="card"><div class="icon">😂</div><h3>Memes</h3><p>Relatable jokes and shareable content for everyday social media.</p></div>
-<div class="card"><div class="icon">⚡</div><h3>Motivation</h3><p>Short, powerful ideas built for Reels, Shorts and posts.</p></div>
-</div></div></section>
+    <a class="logo" href="#">
+      SACHIN<span>.</span>
+    </a>
 
-<section id="social"><div class="wrap"><div class="title"><h2>Connect With Me</h2><p>Replace the links below with your real profiles.</p></div>
-<div class="social">
-<a href="https://www.instagram.com/" target="_blank">Instagram<small>@yourusername</small></a>
-<a href="https://www.facebook.com/" target="_blank">Facebook<small>Your Page</small></a>
-<a href="https://www.youtube.com/" target="_blank">YouTube<small>Your Channel</small></a>
-<a href="https://www.tiktok.com/" target="_blank">TikTok<small>@yourusername</small></a>
-</div></div></section>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#brands">Brands</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-<section id="blog"><div class="wrap"><div class="title"><h2>Creator Resources</h2><p>Build pages around questions your audience actually searches for.</p></div>
-<div class="grid">
-<div class="card"><h3>AI Video Ideas</h3><p>Hooks, concepts and scene structures for short-form videos.</p></div>
-<div class="card"><h3>Reel Growth</h3><p>Practical ideas for stronger hooks, retention and cross-platform distribution.</p></div>
-<div class="card"><h3>Creator Tools</h3><p>A future home for your AI tools, templates, prompts and recommendations.</p></div>
-</div></div></section>
+  </div>
+</nav>
 
-<section id="contact"><div class="wrap"><div class="cta"><h2>Want to collaborate?</h2><p style="color:var(--muted)">Add your email, WhatsApp or business contact here when you're ready.</p><a class="btn" href="mailto:your@email.com">Contact Me</a></div></div></section>
-<footer>© 2026 Sachin Creator Hub • Built for creators</footer>
-</body></html>
+<!-- HERO -->
+<header class="hero">
+
+  <div class="container hero-content">
+
+    <div class="badge">
+      AI CREATOR • DIGITAL STORYTELLER
+    </div>
+
+    <h1>
+      Turning Ideas Into
+      <span>Visual Stories.</span>
+    </h1>
+
+    <p>
+      I create cinematic AI videos, short-form content and
+      digital experiences designed to capture attention and
+      build audiences.
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn btn-primary" href="#work">
+        View My Work
+      </a>
+
+      <a class="btn btn-secondary" href="#brands">
+        Work With Me
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>Creator. Storyteller. Digital Experimenter.</p>
+    </div>
+
+    <div class="about">
+
+      <p>
+        I'm Sachin Panging, an AI-focused digital creator
+        passionate about turning ideas into engaging visual
+        content. I combine AI tools, storytelling and social
+        media creativity to produce short-form content for
+        modern audiences.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WORK -->
+<section id="work">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Featured Work</h2>
+      <p>A selection of content and creative formats.</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card work-card">
+        <span>AI Video</span>
+        <h3>Cinematic AI Stories</h3>
+        <p>Short cinematic stories created with AI-assisted production.</p>
+      </div>
+
+      <div class="card work-card">
+        <span>Short Form</span>
+        <h3>Reels & Shorts</h3>
+        <p>Attention-focused content designed for social platforms.</p>
+      </div>
+
+      <div class="card work-card">
+        <span>Entertainment</span>
+        <h3>Relatable Content</h3>
+        <p>Humour, motivation and relatable digital storytelling.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>What I Create</h2>
+      <p>Content services for audiences and brands.</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-icon">AI</div>
+        <h3>AI Content</h3>
+        <p>
+          AI-assisted videos, characters, concepts and
+          cinematic visual storytelling.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">▶</div>
+        <h3>Short Videos</h3>
+        <p>
+          Reels, YouTube Shorts and social videos designed
+          to capture attention quickly.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">◆</div>
+        <h3>Brand Content</h3>
+        <p>
+          Creative promotional videos and social content
+          tailored around a brand's message.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PLATFORMS -->
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>My Platforms</h2>
+      <p>Follow the content across social media.</p>
+    </div>
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong>Instagram</strong>
+        <span>Short-form content</span>
+      </div>
+
+      <div class="stat">
+        <strong>YouTube</strong>
+        <span>Videos & Shorts</span>
+      </div>
+
+      <div class="stat">
+        <strong>Facebook</strong>
+        <span>Social content</span>
+      </div>
+
+      <div class="stat">
+        <strong>Website</strong>
+        <span>Creator portfolio</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BRANDS -->
+<section id="brands">
+
+  <div class="container">
+
+    <div class="brand-box">
+
+      <h2>Work With Me</h2>
+
+      <p>
+        Looking for creative AI content, short-form videos
+        or social media campaigns? I'm open to selected
+        brand collaborations, sponsored content and creative
+        partnerships.
+      </p>
+
+      <div class="buttons">
+
+        <a class="btn btn-primary" href="#contact">
+          Start a Collaboration
+        </a>
+
+        <a class="btn btn-secondary" href="#work">
+          View Portfolio
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <div class="container contact">
+
+    <div class="section-title">
+
+      <h2>Let's Create Something</h2>
+
+      <p>
+        For collaborations, sponsorships and business inquiries.
+      </p>
+
+    </div>
+
+    <!-- REPLACE THIS EMAIL -->
+    <a class="contact-email"
+       href="mailto:YOUR-EMAIL@example.com">
+      YOUR-EMAIL@example.com
+    </a>
+
+    <div class="buttons">
+
+      <!-- REPLACE THESE LINKS -->
+      <a class="btn btn-secondary"
+         href="https://www.instagram.com/"
+         target="_blank">
+        Instagram
+      </a>
+
+      <a class="btn btn-secondary"
+         href="https://www.youtube.com/"
+         target="_blank">
+        YouTube
+      </a>
+
+      <a class="btn btn-secondary"
+         href="https://www.facebook.com/"
+         target="_blank">
+        Facebook
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Sachin Panging. All rights reserved.
+</footer>
+
+</body>
+</html>
